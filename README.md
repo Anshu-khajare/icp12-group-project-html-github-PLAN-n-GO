@@ -1,4 +1,4 @@
-# Plan & Go ✈️
+# PLAN & GO ✈️
 
 <img src="./image/logo-1.png" height="50"></img>
 
