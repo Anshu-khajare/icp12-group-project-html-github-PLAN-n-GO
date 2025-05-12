@@ -22,7 +22,7 @@
         <h2>Email</h2>
         <img 
             height="50px"
-            src="./../image/placeholder.png">
+            src="./../image/mail (1).png">
         <p> <a href="Plan'nGo@gmail.com">Email</a></p>
         <p>Plan'nGo@gmail.com</p><hr>
 
@@ -32,7 +32,33 @@
                 height="50px"
                 src="./../image/telephone.png">
         <p> <a href="987-657-2002">Phone</a></p>
-        <p>987-657-2002</p>
+        <p>987-657-2002</p><hr><hr>
+
+
+        <h2>Your Feedback</h2>
+
+  <form action="submit_feedback.php" method="POST" class="feedback-form">
+    <label for="name">Name:</label>&nbsp;&nbsp;<br>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br>&nbsp;&nbsp;<br><br>
+
+    <label for="rating">Rating:</label><br>
+    <select id="rating" name="rating" required>
+      <option value="">-- Select --</option>
+      <option value="5">Excellent</option>
+      <option value="4">Good</option>
+      <option value="3">Average</option>
+      <option value="2">Poor</option>
+      <option value="1">Very Poor</option><br><br>&nbsp;&nbsp;
+    </select>
+
+    <label for="comments">Comments:</label><br><br>
+    <textarea id="comments" name="comments" rows="5" placeholder="Tell us about your experience..."></textarea><br>
+
+    <button type="submit">Submit Feedback</button>
+  </form>
     </body>
     
 </html>
