@@ -1,64 +1,102 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Contact</title>
-    </head>
-    <body>
-        
-        <h1>Contact</h1>
-        <img 
-        height="100px"
-        src="./../image/travel.jpg">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        img.icon {
+            height: 50px;
+            vertical-align: middle;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background: #ccc;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .feedback-form input, .feedback-form textarea, .feedback-form select {
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 10px;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .feedback-form button {
+            padding: 10px 20px;
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .feedback-form button:hover {
+            background-color: #005fa3;
+        }
+    </style>
+</head>
+<body>
 
-        <p>If you have any question,feel free to reach out</p><hr><hr>
+    <h1>Contact</h1>
+    <img src="./../image/travel.jpg" alt="Travel Image" height="100">
 
+    <p>If you have any questions, feel free to reach out.</p>
+    <hr><hr>
+
+    <div class="section">
         <h2>Address</h2>
-        <img 
-            height="50px"
-            src="./../image/placeholder.png">
-        <p></p>Near Sai baba temple,<br>shop number 12<br>Shirdi,Ahmadnagar</p><hr>
+        <img src="./../image/placeholder.png" alt="Location Icon" class="icon">
+        <p>
+            Near Sai Baba Temple,<br>
+            Shop Number 12<br>
+            Shirdi, Ahmadnagar
+        </p>
+    </div>
+    <hr>
 
-
+    <div class="section">
         <h2>Email</h2>
-        <img 
-            height="50px"
-            src="./../image/mail (1).png">
-        <p> <a href="Plan'nGo@gmail.com">Email</a></p>
-        <p>Plan'nGo@gmail.com</p><hr>
+        <img src="./../image/mail (1).png" alt="Mail Icon" class="icon">
+        <p><a href="mailto:PlanNGO@gmail.com">PlanNGO@gmail.com</a></p>
+    </div>
+    <hr>
 
-
+    <div class="section">
         <h2>Phone</h2>
-        <img 
-                height="50px"
-                src="./../image/telephone.png">
-        <p> <a href="987-657-2002">Phone</a></p>
-        <p>987-657-2002</p><hr><hr>
+        <img src="./../image/telephone.png" alt="Phone Icon" class="icon">
+        <p><a href="tel:9876572002">987-657-2002</a></p>
+    </div>
+    <hr><hr>
 
-
+    <div class="section">
         <h2>Your Feedback</h2>
+        <form action="submit_feedback.php" method="POST" class="feedback-form">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
 
-  <form action="submit_feedback.php" method="POST" class="feedback-form">
-    <label for="name">Name:</label>&nbsp;&nbsp;<br>
-    <input type="text" id="name" name="name" required><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
 
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" required><br>&nbsp;&nbsp;<br><br>
+            <label for="rating">Rating:</label><br>
+            <select id="rating" name="rating" required>
+                <option value="">-- Select --</option>
+                <option value="5">Excellent</option>
+                <option value="4">Good</option>
+                <option value="3">Average</option>
+                <option value="2">Poor</option>
+                <option value="1">Very Poor</option>
+            </select><br>
 
-    <label for="rating">Rating:</label><br>
-    <select id="rating" name="rating" required>
-      <option value="">-- Select --</option>
-      <option value="5">Excellent</option>
-      <option value="4">Good</option>
-      <option value="3">Average</option>
-      <option value="2">Poor</option>
-      <option value="1">Very Poor</option><br><br>&nbsp;&nbsp;
-    </select>
+            <label for="comments">Comments:</label><br>
+            <textarea id="comments" name="comments" rows="5" placeholder="Tell us about your experience..."></textarea><br>
 
-    <label for="comments">Comments:</label><br><br>
-    <textarea id="comments" name="comments" rows="5" placeholder="Tell us about your experience..."></textarea><br>
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
 
-    <button type="submit">Submit Feedback</button>
-  </form>
-    </body>
-    
+</body>
 </html>
