@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        img.icon {
+            height: 50px;
+            vertical-align: middle;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background: #ccc;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .feedback-form input, .feedback-form textarea, .feedback-form select {
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 10px;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .feedback-form button {
+            padding: 10px 20px;
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .feedback-form button:hover {
+            background-color: #005fa3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Contact</h1>
+    <img src="./../image/travel.jpg" alt="Travel Image" height="100">
+
+    <p>If you have any questions, feel free to reach out.</p>
+    <hr><hr>
+
+    <div class="section">
+        <h2>Address</h2>
+        <img src="./../image/placeholder.png" alt="Location Icon" class="icon">
+        <p>
+            Near Sai Baba Temple,<br>
+            Shop Number 12<br>
+            Shirdi, Ahmadnagar
+        </p>
+    </div>
+    <hr>
+
+    <div class="section">
+        <h2>Email</h2>
+        <img src="./../image/mail (1).png" alt="Mail Icon" class="icon">
+        <p><a href="mailto:PlanNGO@gmail.com">PlanNGO@gmail.com</a></p>
+    </div>
+    <hr>
+
+    <div class="section">
+        <h2>Phone</h2>
+        <img src="./../image/telephone.png" alt="Phone Icon" class="icon">
+        <p><a href="tel:9876572002">987-657-2002</a></p>
+    </div>
+    <hr><hr>
+
+    <div class="section">
+        <h2>Your Feedback</h2>
+        <form action="submit_feedback.php" method="POST" class="feedback-form">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="rating">Rating:</label><br>
+            <select id="rating" name="rating" required>
+                <option value="">-- Select --</option>
+                <option value="5">Excellent</option>
+                <option value="4">Good</option>
+                <option value="3">Average</option>
+                <option value="2">Poor</option>
+                <option value="1">Very Poor</option>
+            </select><br>
+
+            <label for="comments">Comments:</label><br>
+            <textarea id="comments" name="comments" rows="5" placeholder="Tell us about your experience..."></textarea><br>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+
+</body>
+</html>
